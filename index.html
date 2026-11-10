@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f2eb">
+  <meta name="description" content="Um espaço para reunir projetos digitais, experiências e iniciativas da Biblioteca do IFMG Campus Sabará.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Biblioteca IFMG Sabará — Projetos">
+  <meta property="og:description" content="Explore os projetos digitais, jogos, leituras e experiências da nossa biblioteca.">
+  <meta property="og:url" content="https://bibliotecaifmgsabara.github.io/">
+  <title>Biblioteca IFMG Sabará — Projetos</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{--paper:#f5f2eb;--ink:#202b27;--muted:#66716b;--green:#1e5546;--lime:#d5e66e;--coral:#e8795e;--line:rgba(32,43,39,.13);--white:#fffefa}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:"DM Sans",sans-serif}
+    a{color:inherit;text-decoration:none}.wrap{width:min(1160px,calc(100% - 48px));margin:auto}
+    .top{display:flex;align-items:center;justify-content:space-between;padding:26px 0;border-bottom:1px solid var(--line)}
+    .brand{display:flex;align-items:center;gap:12px;font-family:Manrope,sans-serif;font-weight:800;letter-spacing:-.04em}
+    .brand-mark{width:42px;height:42px;border-radius:14px;background:var(--green);display:grid;place-items:center;color:var(--lime);font-size:22px}
+    .brand small{display:block;font:500 11px "DM Sans";letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-top:2px}
+    .top-note{font-size:13px;color:var(--muted)}
+    .hero{padding:82px 0 66px;display:grid;grid-template-columns:1.35fr .65fr;gap:48px;align-items:end}
+    .eyebrow{font-size:12px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--green);display:flex;align-items:center;gap:10px}
+    .eyebrow:before{content:"";width:26px;height:2px;background:var(--coral)}
+    h1{font:800 clamp(44px,7vw,82px)/.99 Manrope,sans-serif;letter-spacing:-.075em;margin:22px 0 24px;max-width:760px}
+    h1 em{font-style:normal;color:var(--green)}
+    .intro{font-size:18px;line-height:1.7;color:#58635d;max-width:620px;margin:0}
+    .hero-note{background:var(--lime);border-radius:24px;padding:26px;transform:rotate(2deg);box-shadow:0 14px 35px #202b2710}
+    .hero-note .symbol{font-size:36px;line-height:1}.hero-note p{font:700 20px/1.35 Manrope;margin:18px 0 0;letter-spacing:-.04em}
+    .section-head{display:flex;justify-content:space-between;align-items:end;margin:14px 0 22px}
+    .section-head h2{font:800 26px Manrope;letter-spacing:-.05em;margin:0}
+    .section-head span{font-size:13px;color:var(--muted)}
+    .projects{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;padding-bottom:88px}
+    .card{position:relative;min-height:310px;background:var(--white);border:1px solid var(--line);border-radius:22px;padding:25px;display:flex;flex-direction:column;overflow:hidden;transition:transform .25s,box-shadow .25s,border-color .25s}
+    .card:hover{transform:translateY(-6px);box-shadow:0 18px 40px #202b2712;border-color:#1e554655}
+    .card-top{display:flex;justify-content:space-between;align-items:center}
+    .iconbox{width:52px;height:52px;border-radius:17px;display:grid;place-items:center;font-size:25px;background:#e8eee8}
+    .tag{font-size:10px;letter-spacing:.12em;text-transform:uppercase;font-weight:700;color:var(--green);background:#e8eee8;border-radius:99px;padding:8px 11px}
+    .card h3{font:800 25px/1.1 Manrope;letter-spacing:-.055em;margin:30px 0 12px}
+    .card p{font-size:14px;line-height:1.65;color:var(--muted);margin:0;max-width:290px}
+    .card-bottom{display:flex;align-items:center;justify-content:space-between;margin-top:auto;padding-top:28px;font-size:13px;font-weight:700;color:var(--green)}
+    .arrow{width:34px;height:34px;border-radius:50%;background:var(--green);color:white;display:grid;place-items:center;font-size:18px;transition:transform .2s}
+    .card:hover .arrow{transform:translate(3px,-3px)}
+    .card.coral .iconbox{background:#fae8e1}.card.coral .tag{background:#fae8e1;color:#a74c37}
+    .card.blue .iconbox{background:#e5edf3}.card.blue .tag{background:#e5edf3;color:#345a77}
+    .card.lime .iconbox{background:#f0f4d8}.card.lime .tag{background:#f0f4d8;color:#53631a}
+    .coming{background:#e9e6de;border-style:dashed;cursor:default}.coming:hover{transform:none;box-shadow:none;border-color:var(--line)}
+    .coming .arrow{background:#a9afa8}.coming .card-bottom{color:#68736c}
+    .footer{border-top:1px solid var(--line);padding:25px 0 34px;display:flex;justify-content:space-between;gap:20px;color:var(--muted);font-size:12px}
+    .footer strong{color:var(--ink)}
+    @media(max-width:850px){.hero{grid-template-columns:1fr;gap:30px;padding:64px 0 52px}.hero-note{max-width:360px}.projects{grid-template-columns:repeat(2,1fr)}}
+    @media(max-width:560px){.wrap{width:min(100% - 32px,1160px)}.top{padding:18px 0}.top-note{display:none}.hero{padding:52px 0 42px}h1{font-size:52px}.intro{font-size:16px}.projects{grid-template-columns:1fr;gap:13px;padding-bottom:60px}.card{min-height:270px}.section-head{align-items:start;gap:12px;flex-direction:column}.footer{flex-direction:column}}
+  </style>
+</head>
+<body>
+  <header class="wrap top">
+    <a class="brand" href="./" aria-label="Biblioteca IFMG Campus Sabará — início">
+      <span class="brand-mark">b.</span><span>Biblioteca IFMG<small>Campus Sabará · Projetos</small></span>
+    </a>
+    <span class="top-note">Conhecimento que circula. Ideias que se encontram.</span>
+  </header>
+  <main class="wrap">
+    <section class="hero">
+      <div>
+        <div class="eyebrow">Nosso espaço digital</div>
+        <h1>Ideias que<br>viram <em>experiências.</em></h1>
+        <p class="intro">Um lugar para descobrir, jogar, ler e explorar. Reunimos aqui projetos digitais e iniciativas da Biblioteca do IFMG Campus Sabará — feitos para aproximar pessoas, cultura e conhecimento.</p>
+      </div>
+      <aside class="hero-note"><div class="symbol">✳</div><p>Entre, descubra algo novo e compartilhe o que encontrar.</p></aside>
+    </section>
+    <section aria-labelledby="projetos-title">
+      <div class="section-head"><h2 id="projetos-title">Explore os projetos</h2><span>Um catálogo em movimento</span></div>
+      <div class="projects">
+        <a class="card coral" href="https://bibliotecaifmgsabara.github.io/marcadores/" target="_blank" rel="noopener">
+          <div class="card-top"><span class="iconbox">▤</span><span class="tag">Leitura · Criação</span></div>
+          <h3>Entrelinhas</h3>
+          <p>Marcadores de página criados na biblioteca por estudantes e pela comunidade. Pequenas peças, grandes histórias.</p>
+          <div class="card-bottom"><span>Conhecer a coleção</span><span class="arrow">↗</span></div>
+        </a>
+        <a class="card blue" href="https://bibliotecaifmgsabara.github.io/quebracabeca/" target="_blank" rel="noopener">
+          <div class="card-top"><span class="iconbox">▦</span><span class="tag">Jogos · Aprendizagem</span></div>
+          <h3>Quebra-Cabeça</h3>
+          <p>Jogos de tabuleiro e experiências lúdicas para conhecer, escolher e jogar — na biblioteca e além dela.</p>
+          <div class="card-bottom"><span>Explorar os jogos</span><span class="arrow">↗</span></div>
+        </a>
+        <a class="card lime" href="https://temsimuai.com.br/" target="_blank" rel="noopener">
+          <div class="card-top"><span class="iconbox">✳</span><span class="tag">Cultura · Informação</span></div>
+          <h3>Tem Sim, Uai</h3>
+          <p>Cultura, educação, oportunidades e informação em um só lugar. O mural digital da Biblioteca do IFMG Campus Sabará.</p>
+          <div class="card-bottom"><span>Visitar o mural</span><span class="arrow">↗</span></div>
+        </a>
+        <div class="card coming">
+          <div class="card-top"><span class="iconbox">▣</span><span class="tag">Audiovisual</span></div>
+          <h3>DVDs &amp; Filmes</h3>
+          <p>Em breve, um espaço para conhecer os títulos audiovisuais e descobrir novas histórias.</p>
+          <div class="card-bottom"><span>Projeto em preparação</span><span class="arrow">…</span></div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="wrap footer">
+    <span><strong>Biblioteca IFMG Campus Sabará</strong> · Projetos e iniciativas</span>
+    <span>Feito para descobrir e compartilhar.</span>
+  </footer>
+</body>
+</html>
